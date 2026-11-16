@@ -1,3 +1,4 @@
+@import url("./responsive.css");
 *,
 *::before,
 *::after {
@@ -7,4 +8,156 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
+}
+
+/* Тёмно-синий
+#26364A · Основной текст
+Светло-серый
+#F4F6F8 · Фон страницы
+Голубой
+#4F7CAC · Кнопки и акценты
+Белый
+#FFFFFF · Карточка приложения */
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #26364A;
+
+  margin-bottom: 6px;
+}
+
+.Description {
+  font-size: 16px;
+  color: #26364A;
+
+  margin-bottom: 20px;
+}
+
+.taskForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.formLabel {
+  width: 400px;
+  height: 40px;
+
+  margin-right: 10px;
+}
+.formLabel input {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.5s ease, box-shadow 0.3s ease;
+}
+
+.formLabel input:focus {
+  outline: none;
+  border-color: #82a2c5;
+  box-shadow: 0 0 5px rgba(79, 124, 172, 0.5);
+}
+
+.formButton {
+  text-align: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4F7CAC;
+  color: #c8d7e7;
+  transition: background-color 0.5s ease;
+}
+
+.formButton:hover {
+  background-color: #82a2c5;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .taskForm {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formLabel {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .formButton {
+    width: 130px;
+    height: 40px;
+    text-align: center;
+  }
+}
+
+.taskList {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 35px auto;
+  gap: 10px;
+}
+
+.taskItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #F4F6F8;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  width: 320px;
+}
+
+.completeCheckbox {
+  align-self: flex-start;
+}
+
+.taskText {
+  font-size: 14px;
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+  margin-left: 12px;
+  color: #26364A;
+}
+
+.taskItemContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.deleteButton {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #FF6B6B;
+  color: #FFFFFF;
+  font-size: 12px;
+  transition: background-color 0.5s ease;
+}
+
+.deleteButton:hover {
+  background-color: #FF4C4C;
+  cursor: pointer;
+}
+
+.completed {
+  background-color: #C8E8C2;
 }

@@ -16,5 +16,10 @@
     "postcss-sort-media-queries": "^6.7.1",
     "prettier": "^3.4.2",
     "vite": "^7.3.7"
+  },
+  "dependencies": {
+    "izitoast": "^1.4.0",
+    "modern-normalize": "^3.0.1",
+    "nanoid": "^6.0.2"
   }
 }

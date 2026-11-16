@@ -1,14 +1,36 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GoIT · Домашнє завдання</title>
+    <title>TaskFlow</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- Розмітку додавай тут за технічним завданням -->
+    <div class="container">
+      <div class="title-container">
+        <h1 class="title">TaskFlow</h1>
+        <p class="Description">Manage your tasks and keep your day organized</p>
+      </div>
 
-    <script type="module" src="./main.js"></script>
+      <form class="taskForm" id="taskForm">
+        <label class="formLabel" >
+          <input type="text" id="taskInput" name="task" placeholder="Enter a new task" />
+        </label>
+        <button class="formButton" type="submit" id="addTaskButton">Add Task</button>
+      </form>
+
+      <ul class="taskList">
+        <li class="taskItem" id="taskItemTemplate"
+         style="display: none;">
+          <div class="taskItemContent">
+            <input type="checkbox" class="completeCheckbox"/>
+            <span class="taskText">Finish the report</span>
+          </div>
+          <button class="deleteButton" type="button">Delete</button>         
+        </li>
+      </ul>
+      <script type="module" src="./main.js"></script>
+    </div>
   </body>
 </html>
